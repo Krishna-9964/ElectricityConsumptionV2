@@ -1,0 +1,73 @@
+
+
+#report {
+    list-style-type: none;
+    padding: 0;
+}
+
+#report li {
+    display: flex;
+}
+
+#report li:hover {
+    background-color: #fff;
+    transition: 0.35s;
+    border-radius: 5px;
+}
+
+#report li h5 {
+    flex: 1;
+    margin: 10px;
+    width: 50%;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: white;
+    overflow: hidden;
+    width: 202px;
+    /* border-top-left-radius: 20px;
+    border-top-right-radius: 20px; */
+    border-radius: 75px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 75px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #3955af;
+    color: rgb(119, 117, 117);
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    /* background-color: #3955af; */
+    color: black;
+  }
+  .charts-card {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    border: 1px solid #d2d2d3;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    margin-left: 50px;
+    /* width: 721px; */
+    width: 85%;
+}
+
+#columns h5
+{
+    font-weight: 700;
+}

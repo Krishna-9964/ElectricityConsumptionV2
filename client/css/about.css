@@ -1,0 +1,20 @@
+/* .image-and-paragraph {
+    float: left;
+    display: flex;
+  }
+  
+  .left-image {
+    float: left;
+    margin-right: 10px;
+  /* }
+  
+  .right-paragraph {
+    margin-left: 10px;
+  } */
+
+  /* h3{
+    text-align: center;
+  } */ 
+  .centered-container {
+    text-align: center;
+  }
