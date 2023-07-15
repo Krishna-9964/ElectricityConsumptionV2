@@ -4,6 +4,11 @@ function getSummary() {
     uiMonth = document.getElementById('uiMonth');
     uiYear = document.getElementById('uiYear');
 
+    if (uiState.value === '' || uiMonth.value === '' || uiYear.value === '') {
+        alert('Please select all the fields');
+        return;
+    }
+
     const url = "http://127.0.0.1:5000/get_month_usage_details"
     let heading = document.getElementById('chart-title');
     let max_value = document.getElementById('max-value');

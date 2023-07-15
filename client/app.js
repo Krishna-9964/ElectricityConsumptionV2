@@ -10,7 +10,10 @@ function onClickedEstimateUsage() {
 
 
     //Monthwise day list
-
+    if (uiMonth === '' || uiDay === '--Select Day--' || uiState === '') {
+        alert("Please select all the fields");
+        return;
+    }
     $.post(url, {
         Month: uiMonth,
         State: uiState,

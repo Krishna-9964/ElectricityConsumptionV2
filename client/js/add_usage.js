@@ -26,19 +26,24 @@ usage_state = document.getElementById('uiState');
 usage_date = document.getElementById('uiDate');
 usage_usage = document.getElementById('uiUsage');
 
-usage_btn.addEventListener('click',()=>{
+usage_btn.addEventListener('click', () => {
     yyyy_mm_dd = usage_date.value;
     arr_date = yyyy_mm_dd.split('-')
     dd_mm_yyyy = '' + arr_date[2] + '-' + arr_date[1] + '-' + arr_date[0];
     url = "http://127.0.0.1:5000/add_usage"
+
+    if (usage_state.value === '' || usage_date.value === '' || usage_usage.value === '') {
+        alert("Enter valid details")
+        return
+    }
     $.post(url, {
         State: usage_state.value,
         Date: dd_mm_yyyy,
         Usage: usage_usage.value
     }, function (data, status) {
-        if(status === "success")
+        if (status === "success")
             window.alert("Added successfully :)")
-    });    
+    });
 })
 
 

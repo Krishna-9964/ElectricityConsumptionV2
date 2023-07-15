@@ -215,9 +215,10 @@ body {
     border: 1px solid #d2d2d3;
     border-radius: 5px;
     box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-    margin-left: 50px;
-    /* width: 721px; */
-    width: 85%;
+    margin-left: 260px;
+    width: 1000px;
+    height: 450px;
+    /* width: 85%; */
 }
 
 .chart-title {
@@ -364,6 +365,7 @@ body {
     margin: 15px;
     font-weight: 700;
 }
+
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: white;
@@ -372,10 +374,10 @@ body {
     /* border-top-left-radius: 20px;
     border-top-right-radius: 20px; */
     border-radius: 75px;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
     float: left;
     color: black;
     text-align: center;
@@ -383,16 +385,16 @@ body {
     text-decoration: none;
     font-size: 17px;
     border-radius: 75px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
     background-color: #3955af;
     color: rgb(119, 117, 117);
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
     /* background-color: #3955af; */
     color: black;
-  }
+}

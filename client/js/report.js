@@ -2,12 +2,15 @@ $('#charts-card').hide()
 
 function getMonthwiseReport() {
     var uiState = document.getElementById("uiState").value;
-    var uiYear = parseInt(document.getElementById("uiYear").value);
+    var uiYear = document.getElementById("uiYear").value;
     var url = "http://127.0.0.1:5000/get_monthwise_report"; //Use this if you are NOT using nginx which is first 7 tutorials
     //var url = "/api/predict_electricity"; // Use this if  you are using nginx. i.e tutorial 8 and onwards
-
+    if (uiState === '' || uiYear === '') {
+        alert("Please select all the fields");
+        return;
+    }
     $.post(url, {
-        Year: uiYear,
+        Year: parseInt(uiYear),
         State: uiState
     }, function (data, status) {
         data = JSON.parse(data)
@@ -19,8 +22,8 @@ function getMonthwiseReport() {
         report.appendChild(heading);
 
         var li_heading = document.createElement('li');
-        li_heading.setAttribute('id','columns');
-        li_heading.innerHTML = '<h5>Month</h5><h5>Usage</h5>'
+        li_heading.setAttribute('id', 'columns');
+        li_heading.innerHTML = '<h5>Month</h5><h5>Usage(Kw)</h5>'
         report.appendChild(li_heading)
 
         data.forEach(function (record) {
