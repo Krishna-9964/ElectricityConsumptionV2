@@ -19,8 +19,8 @@
     <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="https://cdn.canvasjs.com/canvasjs.min.js"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="addusage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/addusage.css') }}">
   </head>
   <body>
     <div class="grid-container">
@@ -31,14 +31,16 @@
           <span class="material-icons-outlined">menu</span>
         </div>
         <div class="header-left">
-          <img src="logo.png">
-          <span></span>Electricity Consumption
+          <img src="{{ url_for('static', filename='img/logo.png') }}">
+          <span ></span>Electricity Consumption
         </div>
+       
         <div class="header-right">
-          <a href="login page/login.html" >
+          <a href="{{url_for('logout')}}" >
           <span class="material-icons-outlined">account_circle</span>Logout
         </a>
         </div>
+        
       </header>
       <!-- End Header -->
 
@@ -46,7 +48,7 @@
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
-            <img src="logo.png">
+            <img src="{{ url_for('static', filename='img/logo.png') }}">
             <span></span></span>Electricity Consumption
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
@@ -54,46 +56,39 @@
 
         <ul class="sidebar-list">
           <li class="sidebar-list-item">
-            <a href="index.html">
+            <a href="{{url_for('dashboard')}}">
               <span class="material-icons-outlined">dashboard</span> Dashboard
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="index.html" >
+            <a href="{{url_for('dashboard')}}" >
               <span class="material-icons-outlined">insert_chart</span> Data Analysis
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="index.html">
+            <a href="{{url_for('dashboard')}}">
               <span class="material-icons-outlined">show_chart</span> Visualisation
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="index.html">
+            <a href="{{url_for('dashboard')}}">
               <span class="material-symbols-outlined">
                 monitoring
                 </span> Prediction
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="report.html" >
+            <a href="{{url_for('report')}}" >
               <span class="material-symbols-outlined">
                 article
                 </span> Report Generation
             </a>
           </li>
           <li class="sidebar-list-item">
-            <a href="addusage.html" >
+            <a href="{{url_for('addusage')}}" >
               <span class="material-symbols-outlined">
                 insert_chart
                 </span> Add Usage
-            </a>
-          </li>
-          <li class="sidebar-list-item">
-            <a href="about.html" >
-              <span class="material-symbols-outlined">
-                article
-                </span> About
             </a>
           </li>
           
@@ -129,7 +124,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
     <!-- Custom JS -->
-    <script src="./js/add_usage.js"></script>
+    <script src="{{ url_for('static', filename='js/add_usage.js') }}"></script>
     
   </body>
 </html>

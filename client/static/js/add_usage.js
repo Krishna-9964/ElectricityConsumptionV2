@@ -41,8 +41,17 @@ usage_btn.addEventListener('click', () => {
         Date: dd_mm_yyyy,
         Usage: usage_usage.value
     }, function (data, status) {
-        if (status === "success")
+        if (status === "success") {
             window.alert("Added successfully :)")
+            // window.location.reload()
+            usage_state.value = ''
+            usage_date.value = ''
+            usage_usage.value = ''
+        }
+        else {
+            window.alert("Failed to add :(")
+        }
+
     });
 })
 
