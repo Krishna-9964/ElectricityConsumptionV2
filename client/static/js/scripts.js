@@ -76,10 +76,10 @@ function barchart(States, Usage) {
 var areaChartOptions = {
   series: [{
     name: '2019',
-    data: [31, 40, 28, 51, 42, 109, 100]
+    data: [31, 40, 28, 51, 42, 109, 100, 109, 62, 109, 100, 109]
   }, {
     name: '2020',
-    data: [11, 32, 45, 32, 34, 52, 41]
+    data: [11, 32, 45, 32, 34, 52, 41, 51, 32, 34, 52, 41]
   }],
   chart: {
     height: 350,
@@ -95,7 +95,7 @@ var areaChartOptions = {
   stroke: {
     curve: 'smooth'
   },
-  labels: ["jan", "Feb", "March", "April", "May", "Jun", "Jul"],
+  labels: ["jan", "Feb", "March", "April", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   markers: {
     size: 0
   },
