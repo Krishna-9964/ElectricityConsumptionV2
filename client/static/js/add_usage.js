@@ -28,6 +28,12 @@ usage_usage = document.getElementById('uiUsage');
 
 usage_btn.addEventListener('click', () => {
     yyyy_mm_dd = usage_date.value;
+    if (Date.parse(yyyy_mm_dd) > new Date()) {
+        alert('Enter Valid Date..!')
+        usage_date.value = ''
+        return
+    }
+
     arr_date = yyyy_mm_dd.split('-')
     dd_mm_yyyy = '' + arr_date[2] + '-' + arr_date[1] + '-' + arr_date[0];
     url = "http://127.0.0.1:5000/add_usage"
